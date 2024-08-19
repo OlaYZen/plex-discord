@@ -12,6 +12,8 @@ Before you start you need a NGINX reverse proxy. Look up yourself how to setup.
 - Adjustable Album Size
 - Storing ID's of Albums
 
+It currently only works if you are using Plexamp. Not browsers
+
 # Install
 Git clone the repo
 
