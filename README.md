@@ -1,4 +1,4 @@
-# Plex-discord
+# Plexamp-rp
 Shows your current playing song on Plexamp on discord. Just like the official Spotify Rich Presence
 
 ![screenshot](readme-image.png)
@@ -18,7 +18,7 @@ It currently only works if you are using Plexamp. Not browsers
 Git clone the repo
 
 ```
-git clone https://github.com/OlaYZen/plex-discord
+git clone https://github.com/OlaYZen/plexamp-rp
 ```
 and change directory ( `cd` ) to it.
 
