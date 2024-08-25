@@ -1,7 +1,7 @@
 # Plexamp-rp
 Shows your current playing song on Plexamp on discord. Just like the official Spotify Rich Presence
 
-![screenshot](readme-image.png)
+![screenshot](image.png)
 
 Before you start you need a NGINX reverse proxy. Look up yourself how to setup.
 
@@ -11,6 +11,7 @@ Before you start you need a NGINX reverse proxy. Look up yourself how to setup.
 - Customizable Log file
 - Adjustable Album Size
 - Storing ID's of Albums
+- Prioritizing the Music player
 
 It currently only works if you are using Plexamp. Not browsers
 
@@ -25,7 +26,7 @@ and change directory ( `cd` ) to it.
 Download the requirements
 
 ```
- pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 change the config.ini settings and 
 
@@ -33,7 +34,7 @@ start the program
 ```
 python main.py
 ```
-
+---
 
 # Config.ini
 ```ini
@@ -49,7 +50,7 @@ DISCORD_CLIENT_ID = YOUR DISCORD CLIENT ID
 ALBUM_COVER_SIZE = 300
 ALBUM_COVER_URL = https://your.domain.com/album_cover
 ALBUM_COVER_URL_LENGTH = 32
-; Check NGINX config in README
+PLATFORM_PRIORITY = Plexamp, Web
 
 [Logging]
 LOG_FILE = plex-discord.log
@@ -59,20 +60,35 @@ LOG_LEVEL = ERROR
 LANGUAGE = en
 ```
 ### [Plex]
-Add your plex url, username and find your [plex token](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/)
+PLEX_URL: This is where you local server goes. 
+
+PLEX_TOKEN: This is where you plex token goes. To find your Plex token follow [this instruction](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/)
+
+SPECIFIC_USERNAME: That is your Plex Username.
 
 ### [Discord]
-Add your Discord client id from your [Discord Application](https://discord.com/developers/applications)
+DISCORD_CLIENT_ID: This is your discord dev application client ID. Copy yours from [here](https://discord.com/developers/applications)
 
 ### [Settings]
-Add your reverse proxy url in the settings. If you want you can change the lenght of the random numbers generated for ALBUM_COVER_URL_LENGTH. The values will be in album_cover_ids.json
+ALBUM_COVER_SIZE: Here you can set the size in pixel of the album cover size. Recommended to be not to big. This improves the Discord album displaying performance.
+
+ALBUM_COVER_URL: This is where your reverse proxy url goes.
+
+ALBUM_COVER_URL_LENGTH: This is how long the random album ID will be inside of `album_cover_ids.json`
+
+PLATFORM_PRIORITY: Here you can change the priority of what player you want. This includes Plexamp and Web. If both platforms are playing the priority will show in discord.
+
 If you do not want a reverse proxy, you can setup a free image uploader service and rewrite the code to work with that. Examples are imgur.
 
 ### [Logging]
-Here you can change the name of the log file and what type you want to log.
+LOG_FILE: Here you can change the logfile name.
+
+LOG_LEVEL: Here is what type of info you want to log.
 
 ### [Language]
-Here you can change the language of the Discord Rich Preferance. You can easily add more languages to `translations.ini`
+LANGUAGE: Here you can change the language of the Discord Rich Preferance. You can easily add more languages to `translations.ini`
+
+---
 
 # NGINX:
 ### Default
