@@ -131,7 +131,7 @@ server {
     proxy_buffering off;
 
     location / {
-        proxy_pass http://x.x.x.x:8081;
+        proxy_pass http://x.x.x.x:32400;
     }
 }
 ```
