@@ -98,26 +98,40 @@ Add this site to your `Default` config.
 server {
     listen 80;
     server_name your.domain.com;
+
+    resolver 8.8.4.4 8.8.8.8 valid=300s;
+    resolver_timeout 10s;
+
+    #Plex has A LOT of javascript, xml and html. This helps a lot, but if it causes playback issues with devices turn it off. (Haven't encountered any yet)
+    gzip on;
+    gzip_vary on;
+    gzip_min_length 1000;
+    gzip_proxied any;
+    gzip_types text/plain text/css text/xml application/xml text/javascript application/x-javascript image/svg+xml;
+    gzip_disable "MSIE [1-6]\.";
+
+    #When using ngx_http_realip_module change $proxy_add_x_forwarded_for to '$http_x_forwarded_for,$realip_remote_addr'
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header Sec-WebSocket-Extensions $http_sec_websocket_extensions;
+    proxy_set_header Sec-WebSocket-Key $http_sec_websocket_key;
+    proxy_set_header Sec-WebSocket-Version $http_sec_websocket_version;
+
+    #Websockets
+    proxy_http_version 1.1;
+    proxy_set_header Upgrade $http_upgrade;
+    proxy_set_header Connection "Upgrade";
+
+    #Disables compression between Plex and Nginx, required if using sub_filter below.
+    #May also improve loading time by a very marginal amount, as nginx will compress anyway.
+    proxy_set_header Accept-Encoding "";
+
+    #Buffering off send to the client as soon as the data is received from Plex.
+    proxy_redirect off;
+    proxy_buffering off;
+
     location / {
         proxy_pass http://x.x.x.x:8081;
-        proxy_set_header Host $host;
-        proxy_set_header X-Real-IP $remote_addr;
-        proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-        proxy_set_header X-Forwarded-Proto $scheme;
-        proxy_set_header Upgrade $http_upgrade;
-        proxy_set_header Connection "upgrade";
-    }
-}
-```
-
-### nginx.conf
-Add this map to your `http` settings.
-
-```conf
-http {
-    map $http_upgrade $connection_upgrade {
-        default upgrade;
-        '' close;
     }
 }
 ```
