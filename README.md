@@ -67,7 +67,7 @@ PLEX_TOKEN: This is where you plex token goes. To find your Plex token follow [t
 SPECIFIC_USERNAME: That is your Plex Username.
 
 ### [Discord]
-DISCORD_CLIENT_ID: This is your discord dev application client ID. Copy yours from [here](https://discord.com/developers/applications)
+DISCORD_CLIENT_ID: This is your discord dev application client ID. Follow [this guide](https://github.com/OlaYZen/plexamp-rp?tab=readme-ov-file#discord-developer-portal)
 
 ### [Settings]
 ALBUM_COVER_SIZE: Here you can set the size in pixel of the album cover size. Recommended to be not to big. This improves the Discord album displaying performance.
@@ -87,6 +87,20 @@ LOG_LEVEL: Here is what type of info you want to log.
 
 ### [Language]
 LANGUAGE: Here you can change the language of the Discord Rich Preferance. You can easily add more languages to `translations.ini`
+
+---
+
+# Discord Developer Portal
+
+Open Discord Developer Portal by clicking [this link](https://discord.com/developers/applications). You may have to login.
+
+In "Applications" create a new applocation and give it a name. This will be the title that displays on Discord.
+
+Open the application after you have created it. Navigate to OAuth2. The client ID that shows there is the client ID you have to add into the config.ini file
+
+Navigate now to Rich Preference > Art Assets. Upload the two images from the icons folder to your application and make sure they are called "plexamp" and "plexweb".
+
+After the files are uploaded, then you are done.
 
 ---
 
