@@ -3,9 +3,14 @@ Shows your current playing song on Plexamp and Plex on Discord. Just like the of
 <p align="center">
 <img src="image_plex.png" width="325"/> <img src="image_plexamp.png" width="325"/> 
 </p>
+<p align="center">
+  <sup>Screenshots from Plex and Plexamp</sup>  
+</p>
 
 
-<sup>Screenshots from Plex and Plexamp</sup>
+
+
+
 
 ### Before you start you need a NGINX reverse proxy. Look up yourself how to setup.
 
