@@ -1,8 +1,8 @@
 # Plexamp-rp
 Shows your current playing song on Plexamp and Plex on Discord. Just like the official Spotify Rich Presence
 
-![screenshot](image_plex.png) 
-![screenshot](image_plexamp.png)
+<img src="image_plex.png" width="425"/> <img src="image_plexamp.png" width="425"/> 
+
 <sup>Screenshots from Plex and Plexamp</sup>
 
 ### Before you start you need a NGINX reverse proxy. Look up yourself how to setup.
