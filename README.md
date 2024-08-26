@@ -78,7 +78,7 @@ ALBUM_COVER_URL_LENGTH: This is how long the random album ID will be inside of `
 
 PLATFORM_PRIORITY: Here you can change the priority of what player you want. This includes Plexamp and Web. If both platforms are playing the priority will show in discord.
 
-If you do not want a reverse proxy, you can setup a free image uploader service and rewrite the code to work with that. Examples are imgur.
+<sup>If you do not want a reverse proxy, you can setup a free image uploader service and rewrite the code to work with that. Examples are imgur. </sup>
 
 ### [Logging]
 LOG_FILE: Here you can change the logfile name.
@@ -135,3 +135,4 @@ server {
     }
 }
 ```
+<sup>NGINX config credits to [varoOP on reddit](https://gist.github.com/MarMed/94b5537a9fb61cf7212808692bbef14d?permalink_comment_id=3087342#gistcomment-3087342)</sup>
