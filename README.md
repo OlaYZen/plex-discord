@@ -67,7 +67,7 @@ PLEX_TOKEN: This is where you plex token goes. To find your Plex token follow [t
 SPECIFIC_USERNAME: That is your Plex Username.
 
 ### [Discord]
-DISCORD_CLIENT_ID: This is your discord dev application client ID. Follow [this guide](https://github.com/OlaYZen/plexamp-rp/edit/main/README.md#discord-developer-portal)
+DISCORD_CLIENT_ID: This is your discord dev application client ID. Follow [this guide](https://github.com/OlaYZen/plexamp-rp?tab=readme-ov-file#discord-developer-portal)
 
 ### [Settings]
 ALBUM_COVER_SIZE: Here you can set the size in pixel of the album cover size. Recommended to be not to big. This improves the Discord album displaying performance.
