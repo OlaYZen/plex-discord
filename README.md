@@ -1,9 +1,11 @@
 # Plexamp-rp
-Shows your current playing song on Plexamp on discord. Just like the official Spotify Rich Presence
+Shows your current playing song on Plexamp and Plex on Discord. Just like the official Spotify Rich Presence
 
-![screenshot](image.png)
+![screenshot](image_plex.png) 
+![screenshot](image_plexamp.png)
+<sup>Screenshots from Plex and Plexamp</sup>
 
-Before you start you need a NGINX reverse proxy. Look up yourself how to setup.
+### Before you start you need a NGINX reverse proxy. Look up yourself how to setup.
 
 # Features
 - Self Hosted album covers
@@ -12,6 +14,7 @@ Before you start you need a NGINX reverse proxy. Look up yourself how to setup.
 - Adjustable Album Size
 - Storing ID's of Albums
 - Prioritizing the Music player
+- GUI version of the script
 
 It currently only works if you are using Plexamp. Not browsers
 
@@ -101,6 +104,15 @@ Open the application after you have created it. Navigate to OAuth2. The client I
 Navigate now to Rich Preference > Art Assets. Upload the two images from the icons folder to your application and make sure they are called "plexamp" and "plexweb".
 
 After the files are uploaded, then you are done.
+
+---
+
+# GUI
+This is how the GUI looks like.
+
+![screenshot](image_gui.png)
+
+its nothing fancy, just a simple GUI. It allows you to open the logs, clear the logs and exit the script. And see the current playing song, Album and the link to the album cover.
 
 ---
 
