@@ -282,7 +282,7 @@ def display_interface(current_music):
     else:
         print("No music currently playing.")
     
-    print("\nLive Settings:")
+    print("\nOptions:")
     print("1. Open Logs")
     print("2. Clear Logs")
     print("3. Exit")
