@@ -128,6 +128,13 @@ its nothing fancy, just a simple GUI. It allows you to open the logs, clear the 
 Add this site to your `Default` config.
 
 ```conf
+
+upstream plex_backend {
+	#Set this to the IP address that appears in `ifconfig` (NATTED LAN IP or Public IP address) if you want the bandwidth meter in the server status page to work
+	server x.x.x.x:32400;
+	keepalive 32;
+}
+
 server {
     listen 80;
     server_name your.domain.com;
