@@ -44,9 +44,9 @@ start the program
 ```
 python main.py
 ```
----
 
-# Config.ini
+### Configuration File
+The `config.ini` file should be structured as follows:
 ```ini
 [Plex]
 PLEX_URL = http://x.x.x.x:32400/
@@ -69,36 +69,42 @@ LOG_LEVEL = ERROR
 [Language]
 LANGUAGE = en
 ```
-### [Plex]
-PLEX_URL: This is where you local server goes. 
+#### Options:
+---
+##### Plex Options:
+- `PLEX_URL`: This is where you local server goes. 
 
-PLEX_TOKEN: This is where you plex token goes. To find your Plex token follow [this instruction](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/)
+- `PLEX_TOKEN`: This is where you plex token goes. To find your Plex token follow [this instruction](https://support.plex.tv/articles/204059436-finding-an-authentication-token-x-plex-token/)
 
-SPECIFIC_USERNAME: That is your Plex Username.
+- `SPECIFIC_USERNAME`: That is your Plex Username.
 
-### [Discord]
-DISCORD_CLIENT_ID: This is your discord dev application client ID. Follow [this guide](https://github.com/OlaYZen/plexamp-rp?tab=readme-ov-file#discord-developer-portal)
+##### Discord Options:
+---
+- `DISCORD_CLIENT_ID`: This is your discord dev application client ID. Follow [this guide](https://github.com/OlaYZen/plexamp-rp?tab=readme-ov-file#discord-developer-portal)
 
-### [Settings]
-ALBUM_COVER_SIZE: Here you can set the size in pixel of the album cover size. Recommended to be not to big. This improves the Discord album displaying performance.
+##### Album Options:
+---
+- `ALBUM_COVER_SIZE`: Here you can set the size in pixel of the album cover size. Recommended to be not to big. This improves the Discord album displaying performance.
 
-ALBUM_COVER_URL: This is where your reverse proxy url goes.
+- `ALBUM_COVER_URL`: This is where your reverse proxy url goes.
 
-ALBUM_COVER_URL_LENGTH: This is how long the random album ID will be inside of `album_cover_ids.json`
+- `ALBUM_COVER_URL_LENGTH`: This is how long the random album ID will be inside of `album_cover_ids.json`
 
-PLATFORM_PRIORITY: Here you can change the priority of what player you want. This includes Plexamp and Web. If both platforms are playing the priority will show in discord.
+- `PLATFORM_PRIORITY`: Here you can change the priority of what player you want. This includes Plexamp and Web. If both platforms are playing the priority will show in discord.
 
 <sup>If you do not want a reverse proxy, you can setup a free image uploader service and rewrite the code to work with that. Examples are imgur. </sup>
 
-### [Logging]
-LOG_FILE: Here you can change the logfile name.
-
-LOG_LEVEL: Here is what type of info you want to log.
-
-### [Language]
-LANGUAGE: Here you can change the language of the Discord Rich Preferance. You can easily add more languages to `translations.ini`
-
+##### Logging options:
 ---
+- `LOG_FILE`: Here you can change the logfile name.
+
+- `LOG_LEVEL`: Here is what type of info you want to log.
+
+##### Language options:
+---
+- `LANGUAGE`: Here you can change the language of the Discord Rich Preferance. You can easily add more languages to `translations.ini`
+
+
 
 # Discord Developer Portal
 
@@ -175,4 +181,4 @@ server {
     }
 }
 ```
-<sup>NGINX config credits to [varoOP on reddit](https://gist.github.com/MarMed/94b5537a9fb61cf7212808692bbef14d?permalink_comment_id=3087342#gistcomment-3087342)</sup>
+<sup>NGINX config credits to [varoOP on GitHub](https://gist.github.com/MarMed/94b5537a9fb61cf7212808692bbef14d?permalink_comment_id=3087342#gistcomment-3087342)</sup>
