@@ -102,7 +102,7 @@ LANGUAGE = en
 
 ##### Language options:
 ---
-- `LANGUAGE`: Here you can change the language of the Discord Rich Preferance. You can easily add more languages to `translations.ini`
+- `LANGUAGE`: Here you can change the language of the Discord Rich Presence. You can easily add more languages to `translations.ini`
 
 
 
@@ -114,7 +114,7 @@ In "Applications" create a new applocation and give it a name. This will be the 
 
 Open the application after you have created it. Navigate to OAuth2. The client ID that shows there is the client ID you have to add into the config.ini file
 
-Navigate now to Rich Preference > Art Assets. Upload the two images from the icons folder to your application and make sure they are called "plexamp" and "plexweb".
+Navigate now to Rich Presence > Art Assets. Upload the two images from the icons folder to your application and make sure they are called "plexamp" and "plexweb".
 
 After the files are uploaded, then you are done.
 
